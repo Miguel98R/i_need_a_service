@@ -1,0 +1,30 @@
+{
+  "name": "i_need_a_service",
+  "version": "1.0.0",
+  "description": "Web app que impulsa el comercio local ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "node",
+    "js"
+  ],
+  "author": "Jose Miguel Rosas Jimenez",
+  "license": "ISC",
+  "dependencies": {
+    "apiato": "^1.1.2",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.2",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
