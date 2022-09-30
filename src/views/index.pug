@@ -1,15 +1,33 @@
 doctype html
 html(lang="en")
-    include templates/headers
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+
+        title #{title}
     body
-        
-            h1.text-center.text-bg-danger.p-0.m-0  Welcome !!
-            h3.text-center.text-bg-warning  I need a service web app
+        h1#title MyPage
 
-            
-            include templates/login 
+        if(users)
+            each val in users
+                h2 !{val.name}
 
+        .container
+            .row
+                .col-4
+                .col-4
+                    .card
+                        .card-header
+                            h3 formulario
+                        .card-body
+                            label Name
+                            input.form-control#name
+                            label age
+                            input(type="number").form-control#age
+                            br
+                            button.btn.btn-outline-dark.btn-block#save Guardar
+                .col-4
 
-
-    include templates/scripts
-    
+        include template/scripts

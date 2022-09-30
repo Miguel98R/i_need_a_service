@@ -1,6 +1,4 @@
 alert("entrado")
-
-
 $(document).ready(function () {
 
     $('#save').click(async function () {
@@ -19,6 +17,7 @@ $(document).ready(function () {
 
 })
 
+
 let uri = '/' //Base uri of APIed-Piper project
 let base_path = 'api/' //base path of APIed-Piper project
 
@@ -31,4 +30,3 @@ let main = async function () {
 
 }
 main()
-
