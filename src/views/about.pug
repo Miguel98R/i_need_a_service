@@ -1,13 +1,25 @@
 doctype html
-html(lang="es")
+html(lang="en")
         head
         include template/headSRC
         
         title #{title}
 
         body
+
+           
+          
+
           include template/nav
-          include template/carousel
+
+          if(users)
+              each val in users
+                  
+                  p !{val.nombre_user}
+         
+          
+          
+
 
           include template/footer 
           

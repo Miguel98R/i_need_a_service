@@ -5,24 +5,23 @@ let hobySchema = require('./hobbies.models')
 
 
 let userSchema = new Schema({
-    name: {
-        type: String
+    nombre_user: {
+        type: String,
+        required: true,
+     },
+     edad: {
+        type:Number,
+        required: true,
     },
-    age: Number,
-    user: String,
     password: {
         type: String,
         required: true,
     },
     email: {
         type: String,
-        unique: true,
         required: true,
     },
-    hobbies: [{
-        type: Schema.Types.ObjectId,
-        ref: hobySchema
-    }]
+  
 
 }, {timestamps: true})
 

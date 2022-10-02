@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/pepito').then(function () {
+
+mongoose.connect('mongodb://localhost/iNeddaService').then(() => {
     console.log('Se conecto a la DB')
-}).catch(function (e) {
+}).catch( (e) => {
     console.error('Error al conetarse a a db', e)
 
 });

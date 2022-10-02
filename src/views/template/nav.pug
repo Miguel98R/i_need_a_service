@@ -1,0 +1,17 @@
+nav.navbar.navbar-expand-lg.bg-light
+  .container-fluid
+    a.navbar-brand(href='/') I need a service
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarTogglerDemo02' aria-controls='navbarTogglerDemo02' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarTogglerDemo02.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/') Inicio
+        li.nav-item
+          a.nav-link(href='/about') Sobre nosotros
+        li.nav-item
+          button.btn.registro(type='button' data-bs-toggle='modal' data-bs-target='#modalRegistro') Registrate
+      form.d-flex(role='search')
+        input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+        button.btn.btn-outline-success(type='submit') Search
+

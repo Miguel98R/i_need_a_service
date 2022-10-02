@@ -1,0 +1,28 @@
+
+#modalRegistro.modal.fade(tabindex='-1' aria-labelledby='modalRegistro' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title.text-center Nuevo usuario
+        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+      .modal-body
+        .card.text-center.border-warning
+            .card-header
+                h5 Ingresa los siguientes datos
+            
+            .card-body
+                    
+                    .row 
+                        .col-6
+                            label Nombre completo
+                            input.form-control(type="text")#nombre_user
+                            label Edad
+                            input(type="text").form-control#edad_user
+                        .col-6
+                            label Email
+                            input(type="email").form-control#email_user
+                            label Contraseña
+                            input(type="text").form-control#password_user
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Cancelar
+        button.btn.btn-primary(type='button')#guardar_user Registrar

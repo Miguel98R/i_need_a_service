@@ -6,7 +6,7 @@ try {
 }
 
 
-let codeRagSdk = function (host_uri = 'http://localhost:3000/', api_base = "api/", options = {}) {
+let codeRagSdk = function (host_uri = 'http://localhost:3001/', api_base = "api/", options = {}) {
 
     console.log(`
     Welcome to 
