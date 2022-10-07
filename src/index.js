@@ -14,6 +14,7 @@ app.set('appName', 'I need a service')
 
 
 app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, 'views/adminWeb'))
 app.set('view engine', 'pug')
 
 //middlewares

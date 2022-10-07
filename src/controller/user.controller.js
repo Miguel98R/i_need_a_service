@@ -1,17 +1,14 @@
 let userModel = require('./../models/user.models')
-//let hobiModel = require('./../models/hobbies.models')
 let apiato = require('apiato')
 
-
 let ms = new apiato();
-
 
 let validateObject = {
     nombre_user: 'string,mandatory',
     edad: 'number',
 }
 let populationObject = {
-    //hobbies: hobiModel
+    
 }
 let options = {}
 

@@ -3,7 +3,7 @@ const router = express.Router()
 
 
 router.use('/user', require('./user.routes'))
-router.use('/hobie', require('./hobie.routes'))
+
 
 
 router.all("*", (req, res) => {

@@ -19,6 +19,12 @@ let userSchema = new Schema({
         type: String,
         required: true,
     },
+    //editar este
+    service: {
+        type: Schema.Types.ObjectId,
+        required: false,
+        ref: user
+    },
   
 
 }, {timestamps: true})
