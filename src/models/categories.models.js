@@ -9,10 +9,10 @@ let categorySchema = new Schema({
     category_img: {
         type: String
     },
-    category_description:{
+    description:{
         type:String
     },
-    category_status:{
+    status:{
         type:String
     }
 

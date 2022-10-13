@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-let Schema = mongoose.Schema
-
+const Schema = mongoose.Schema
+const services = require('./services.models')
 
 let userSchema = new Schema({
     nombre_user: {
@@ -19,11 +19,11 @@ let userSchema = new Schema({
         type: String,
         required: true,
     },
-    //editar este
+   
     service: {
         type: Schema.Types.ObjectId,
         required: false,
-        ref: user
+        ref: services
     },
   
 

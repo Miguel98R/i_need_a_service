@@ -4,6 +4,7 @@ const path = require('path')
 const app = express()
 const db = require('./db')
 let bodyParser = require('body-parser')
+var moment = require('moment');
 
 
 
@@ -14,8 +15,10 @@ app.set('appName', 'I need a service')
 
 
 app.set('views', path.join(__dirname, 'views'))
-app.set('views', path.join(__dirname, 'views/adminWeb'))
+
 app.set('view engine', 'pug')
+
+
 
 //middlewares
 // parse application/x-www-form-urlencoded
