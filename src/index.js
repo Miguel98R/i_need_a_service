@@ -4,8 +4,6 @@ const path = require('path')
 const app = express()
 const db = require('./db')
 let bodyParser = require('body-parser')
-var moment = require('moment');
-
 
 
 

@@ -1,28 +1,28 @@
 const express = require('express')
 const router = express.Router()
 
-let userModel = require('./../models/user.models')
+let title = 'ServiceSerch'
 
 router.get("/", async (req, res) => {
     
-    res.render('index', {title: 'I need a service '})
+    res.render('index', {title: title })
 })
 
 router.get("/about", async (req, res) => {
 
-    res.render('about',{title: 'I need a service | about'})
+    res.render('about',{title: title + ' | about'})
 })
 
 router.get("/new_service", async (req, res) => {
 
 
-    res.render('newService',{title: 'I need a service | Nuevo servicio'})
+    res.render('newService',{title:  title + ' | Nuevo servicio'})
 })
 
 router.get("/sudo", async (req, res) => {
 
 
-    res.render('admin',{title: 'I need a service | Admin'})
+    res.render('admin',{title: title + ' | Admin'})
 })
 
 
