@@ -7,4 +7,5 @@ mongoose.connect('mongodb://localhost/ServiceSerch').then(() => {
 
 });
 
+
 module.exports = mongoose
