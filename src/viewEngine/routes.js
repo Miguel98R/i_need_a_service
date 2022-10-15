@@ -10,19 +10,23 @@ router.get("/", async (req, res) => {
 
 router.get("/about", async (req, res) => {
 
-    res.render('about',{title: title + ' | about'})
+    res.render('about',{title: title })
 })
 
 router.get("/new_service", async (req, res) => {
 
 
-    res.render('newService',{title:  title + ' | Nuevo servicio'})
+    res.render('newService',{title:  title })
 })
 
+
+
+
+///EL MIGUEL TODAVIA NO HACE QUE SIRVA -<<<<
 router.get("/sudo", async (req, res) => {
 
 
-    res.render('admin',{title: title + ' | Admin'})
+    res.render('admin',{title: title })
 })
 
 

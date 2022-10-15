@@ -9,7 +9,7 @@ let bodyParser = require('body-parser')
 
 //Configuraciones
 app.set('port', 3001);
-app.set('appName', 'I need a service')
+app.set('appName', 'ServiceSerch')
 
 
 app.set('views', path.join(__dirname, 'views'))
