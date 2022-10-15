@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+
+
 mongoose.connect('mongodb://localhost/ServiceSerch').then(() => {
     console.log('Se conecto a la DB')
 }).catch( (e) => {
