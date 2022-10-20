@@ -1,0 +1,118 @@
+
+.p-5.text-center.bg-image(style="\
+background-image: url('https://merida.anahuac.mx/hs-fs/hubfs/posgrado/Blog%20Posgrado/2018%20Posgrado/Junio%2018%20posgrado/negociacion%20para%20empresas.png?width=1200&name=negociacion%20para%20empresas.png');\
+height: 400px;\
+")
+  .mask(style='background-color: rgba(0, 0, 0, 0.6);')
+    .d-flex.justify-content-center.align-items-center.h-100
+      .text-white
+        h1.mb-3 ¡ Da el primer paso !
+        h4.mb-3 Iniciar tu registro te lleva menos de 10 minutos
+        p.mb-3 Llena el siguiente formulario para comenzar con la plataforma
+
+
+
+br
+.container
+    .card.border.border-warning
+        .card-header.bg-warning.text-white.text-center
+            h2
+                i.fa-solid.fa-user
+                |   Datos personales
+
+            p Ingresa los siguientes datos:
+        .card-body
+            .row
+                p 
+                    b 
+                        i.fa-solid.fa-user
+                        |  Nombe completo:
+                .col-4
+                    .form-outline
+
+                        input#name_user_s.form-control(type='text')
+                        label.form-label(for='name_user_service')  Nombre(s)
+
+                .col-4 
+                    .form-outline
+                        input#apellidoPa_user_s.form-control(type='text')
+                        label.form-label(for='apellidoPa_user_s') Apellido paterno
+                
+                .col-4
+                    .form-outline
+                        input#apellidoMa_user_s.form-control(type='text')
+                        label.form-label(for='apellidoMa_user_s') Apellido materno
+            br
+            .row
+                
+                .col-6
+                    p 
+                        b   
+                            i.fa-solid.fa-cake-candles
+                            |  Fecha de nacimiento 
+                    .form-outline
+                        input#fecha_nacimiento_s.form-control(type='date')
+                        label.form-label(for='name_user_service')  Fecha de nacimiento
+            br
+            .row
+                p 
+                    b 
+                        i.fa-solid.fa-house-chimney 
+                        |  Dirección: 
+
+                .col-4
+                    .form-outline.my-2
+                        input#calle_user_s.form-control(type='text')
+                        label.form-label(for='calle_user_s') Calle
+                    .form-outline.my-2
+                        input#no_int_s.form-control(type='text')
+                        label.form-label(for='no_int')  No. int
+                    .form-outline.my-2
+                        input#no_ext_s.form-control(type='text')
+                        label.form-label(for='no_ext_s')  No. ext
+                .col-4
+                    .form-outline.my-2
+                        input#municipio_s.form-control(type='text')
+                        label.form-label(for='municipio_s')  Municipio
+                    .form-outline.my-2
+                        input#estado_s.form-control(type='text')
+                        label.form-label(for='estado_s')  Estado
+
+                .col-4 
+                    .form-outline.my-2
+                        input#cp_s.form-control(type='text')
+                        label.form-label(for='cp_s') Codigo postal
+
+                    .form-outline.my-2
+                        input#referencia_user_s.form-control(type='text')
+                        label.form-label(for='referencia_user_s') Referencia
+            
+            br 
+
+            .row
+                p 
+                     b 
+                        i.fa-solid.fa-circle-user
+                        |  Usuario y contraseña  
+                          
+                
+                .col-4
+                    
+
+                    .form-outline
+                        input#fecha_nacimiento_s.form-control(type='email')
+                        label.form-label(for='name_user_service')  Correo electronico
+                
+                .col-4
+                    .form-outline
+                        input#fecha_nacimiento_s.form-control(type='password')
+                        label.form-label(for='name_user_service')  Contraseña
+            br   
+
+        .card.footer
+
+                button.btn.text-white(type="submit" style="background:#ff6d00") Registrar
+    br
+
+
+            

@@ -2,13 +2,14 @@ const notyf = new Notyf()
 
 $(document).ready(function () {
 
+  //$('#services').append('')
+
+
+
+
   let nuevo_usuario = {}
 
-
-
-  $('#guardar_user').click(function () {
-
-      
+  $('#guardar_user').click(function () {      
 
     nuevo_usuario.nombre_user = $('#nombre_user').val()
     nuevo_usuario.edad = $('#edad_user').val()

@@ -7,10 +7,35 @@ let userSchema = new Schema({
         type: String,
         required: true,
      },
-     edad: {
+    no_int:{
+        type:String,
+        required:false
+    },
+    no_ext:{
+        type:String,
+        required:false
+    },
+   calle_user:{
+        type:String,
+        required:false
+    },
+    municipio_user:{
+        type:String,
+        required:false
+    },
+    estado_user:{
+        type:String,
+        required:false
+    },
+    codigo_postal:{
+        type:String,
+        required:false
+    },
+    nacimiento: {
         type:Number,
         required: true,
     },
+
     password: {
         type: String,
         required: true,

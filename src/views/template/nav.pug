@@ -1,18 +1,24 @@
 nav.navbar.navbar-expand-lg.bg-light
   .container-fluid
     a.navbar-brand(href='/') #{title}
-    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarTogglerDemo02' aria-controls='navbarTogglerDemo02' aria-expanded='false' aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    #navbarTogglerDemo02.collapse.navbar-collapse
-      ul.navbar-nav.me-auto.mb-2.mb-lg-0
-        
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  // Container wrapper
+  .container-fluid
+    // Toggle button
+    button.navbar-toggler(type='button' data-mdb-toggle='collapse' data-mdb-target='#navbarCenteredExample' aria-controls='navbarCenteredExample' aria-expanded='false' aria-label='Toggle navigation')
+      i.fas.fa-bars
+    // Collapsible wrapper
+    #navbarCenteredExample.collapse.navbar-collapse.justify-content-center
+      // Left links
+      ul.navbar-nav.mb-2.mb-lg-0
         li.nav-item
-          a.nav-link.text-black(href='/about') Sobre nosotros
-        li.nav-item
-          a.nav-link.text-black(href='/new_service') ¿ Ofreces un servicio ?
-        li.nav-item
-          button.btn.btn-primary.me-3.registro(type='button' data-bs-toggle='modal' data-bs-target='#modalRegistro') Registrate
+          button.btn.btn-default.me-3.registro.text-dark(type='button' data-bs-toggle='modal' data-bs-target='#modalRegistro') Registrate
+      
+      
        
-     
+      
+
+          
       
 
