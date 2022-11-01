@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const morgan = require('morgan')
 const path = require('path')
@@ -8,8 +10,8 @@ let bodyParser = require('body-parser')
 
 
 //Configuraciones
-app.set('port', 3001);
-app.set('appName', 'ServiceSerch')
+app.set('port',process.env.PORT || 3001 )
+app.set('appName',process.env.APP_NAME)
 
 
 app.set('views', path.join(__dirname, 'views'))

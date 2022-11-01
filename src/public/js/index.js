@@ -1,4 +1,4 @@
-const notyf = new Notyf()
+
 
 $(document).ready(function () {
 

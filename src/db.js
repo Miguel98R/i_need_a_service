@@ -1,9 +1,11 @@
+
+
 const mongoose = require('mongoose');
 
 
+mongoose.connect('mongodb://'+process.env.URL_SERVER+'/'+process.env.DB_NAME).then(() => {
 
-mongoose.connect('mongodb://localhost/ServiceSerch').then(() => {
-    console.log('Se conecto a la DB')
+    console.log('Se conecto a la DB',process.env.DB_NAME)
 }).catch( (e) => {
     console.error('Error al conetarse a a db', e)
 

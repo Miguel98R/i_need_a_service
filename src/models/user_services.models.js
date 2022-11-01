@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const services = require('./services.models')
 
-let userSchema = new Schema({
+let user_ServiceSchema = new Schema({
     nombre_user_s: {
         type: String,
         required: true,
@@ -39,7 +39,7 @@ let userSchema = new Schema({
         required: true,
      },
      nacimiento_s: {
-        type:Number,
+        type:String,
         required: true,
     },
     password: {
@@ -51,13 +51,18 @@ let userSchema = new Schema({
         required: true,
     },
    
-    service: {
+    service: { 
         type: Schema.Types.ObjectId,
         required: false,
         ref: services
+    },
+    status: { // true activo 
+        type: Boolean,
+        required: true,
+        default: true
     },
   
 
 }, {timestamps: true})
 
-module.exports = new mongoose.model('user', userSchema)
+module.exports = new mongoose.model('user_services', user_ServiceSchema)
