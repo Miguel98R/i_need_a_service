@@ -1,21 +1,30 @@
-nav.navbar.navbar-expand-lg.bg-light
-  .container-fluid
-    a.navbar-brand(href='/') #{title}
+div
+  .text-end(style="background-color:#2e889a;")
+    .row 
+      .col-1
+      .col-10.text-center.my-4
+          a(href='/')
+                  img( width="10%" src="./public/img/logo.jpeg", alt="", srcset="" class="rounded-circle")
+      .col-1
 
-nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  // Container wrapper
-  .container-fluid
-    // Toggle button
-    button.navbar-toggler(type='button' data-mdb-toggle='collapse' data-mdb-target='#navbarCenteredExample' aria-controls='navbarCenteredExample' aria-expanded='false' aria-label='Toggle navigation')
-      i.fas.fa-bars
-    // Collapsible wrapper
-    #navbarCenteredExample.collapse.navbar-collapse.justify-content-center
-      // Left links
-      ul.navbar-nav.mb-2.mb-lg-0
-        li.nav-item
-          button.btn.btn-default.me-3.registro.text-dark(type='button' data-bs-toggle='modal' data-bs-target='#modalRegistro') Registrate
+.container-fluid.text-end(style="background-color:#2e679a;")
+     
+      button.btn.btn-link.me-3.text-white.registro(type='button' data-bs-toggle='modal' data-bs-target='#modalRegistro') | Registrate |
+      button.btn.btn-link.me-3.text-white(type='button' data-bs-toggle='modal' data-bs-target='#modalRegistro') | Inicia sesión |
+      button.btn.btn-link.me-3.text-white(type='button' data-bs-toggle='modal' data-bs-target='#modalRegistro') | Inicia sesión |
       
       
+     
+.container-fluid.py-3
+  .row
+      .col-1 
+      .col-10.text-center
+          div
+            input#buscar_servicio.rounded(size="70" type="text",  placeholder="Buscar un servicio.....")
+            
+      .col-1
+   
+
        
       
 

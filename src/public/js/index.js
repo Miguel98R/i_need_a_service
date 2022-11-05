@@ -1,9 +1,80 @@
+let services_menu = [
+  {
+  
+    title: 'Entretenimiento',
+    img:''
+
+}, 
+{
+
+  
+    title: 'Belleza',
+    img:''
+    
+}, 
+{
+
+ 
+    title: 'Hogar',
+    img:''
+   
+}, 
+{
+  
+  title: 'Empresarial',
+  img:''
+},
+{
+
+
+  title: 'Autos',
+  img:''
+  
+}, 
+{
+
+
+  title: 'Salud',
+  img:''
+ 
+}, 
+
+{
+
+
+  title: 'Mascotas',
+  img:''
+ 
+}, 
+]
 
 
 $(document).ready(function () {
 
-  //$('#services').append('')
+  for (let item of services_menu){
 
+    $('.services_menu').append('<div class="col-4">'
+      +'<div class="card my-2 mx-3">'
+
+          +'<div class="card-header" >'
+            
+          +'</div>'
+          +'<div class="card-body">'
+                +'<img width="67%" class="img-fluid" src=""></img>'
+          +'</div>'
+          +'<div class="card-footer text-center" style="background-color: #2e679a;">'
+            + '<h5 class="text-white">'+item.title+'</h5>'
+          +'</div>'
+  
+  
+      +'</div>'
+  +'</div>' )
+
+
+
+  }
+
+  
 
 
 
