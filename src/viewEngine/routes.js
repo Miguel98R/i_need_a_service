@@ -8,6 +8,11 @@ router.get("/", async (req, res) => {
     res.render('index', {title: title })
 })
 
+router.get("/login", async (req, res) => {
+    
+    res.render('login', {title: title })
+})
+
 router.get("/about", async (req, res) => {
 
     res.render('about',{title: title })

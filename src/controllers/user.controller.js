@@ -3,7 +3,62 @@ let user_serviceModel = require('./../models/user_services.models')
 const moment = require('moment')
 const moment_timezone = require('moment-timezone')
 
+let login_user = async function (req, res) {
 
+    let {email, password,type_user} = req.body
+
+
+    try {
+        if(type_user == 'cliente'){
+
+            let user_data = await userModel.findOne({email}).lean()
+
+            if (!user_data) {
+                res.status(404).json({
+                    success: false,
+                    message: 'Usuario incorrecto'
+                })
+                return 0
+            }
+    
+            console.log(user_data.password)
+
+            if (user_data.password == password) {
+
+                res.status(200).json({
+                    message: 'Iniciando sesión',
+                    success: true,
+                    data: user_data,
+                    
+                })
+    
+    
+            } else {
+    
+                res.status(403).json({
+                    code: 403,
+                    success: false,
+                    message: 'Contraseña incorrecta'
+                })
+                return 0
+    
+    
+            }
+            
+        }
+
+    
+
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({
+            success: false,
+            error: e
+        })
+        return 0
+    }
+
+}
 
 let new_user = async function (req, res) {
     
@@ -12,6 +67,18 @@ let new_user = async function (req, res) {
 
    
     try {
+
+        let email = nuevo_usuario.email
+        let user_exist = await userModel.findOne({email})
+
+        if(user_exist){
+            res.status(405).json({
+                success:false,
+                message:'El usuario ya existe'
+            })
+
+            return
+        }
 
         let user = new userModel ({
             nombre_user : nuevo_usuario.nombre_user,
@@ -48,17 +115,17 @@ let new_user = async function (req, res) {
 let new_user_service = async function (req, res) {
     
     let nuevo_usuario_sevice  = req.body
-    console.log("data>>>>>>>>>",nuevo_usuario_sevice)
+    
 
     let user_service 
    
     try {
 
          user_service = await user_serviceModel.findOne({email:nuevo_usuario_sevice.email})
-         console.log(user_service)
+      
 
          if(user_service){
-            console.log("entro aqui")
+        
             res.status(404).json({
                 success:false,
                 message:'El usuario ya existe'
@@ -84,7 +151,7 @@ let new_user_service = async function (req, res) {
             
 
         })
-        console.log(user)
+    
       
         user.save()
 
@@ -103,9 +170,10 @@ let new_user_service = async function (req, res) {
             error:e
             
         })
+        return 
     }
     
     
 }
 
-module.exports = { new_user , new_user_service}
+module.exports = { new_user , new_user_service ,login_user}

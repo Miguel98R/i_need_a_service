@@ -2,40 +2,46 @@ let services_menu = [
   {
   
     title: 'Entretenimiento',
-    img:'https://www.deyaalvarezvillajuana.com/wp-content/uploads/2019/02/pol%C3%ADtica-del-entretenimiento-945x610.jpg'
+    img:'https://www.deyaalvarezvillajuana.com/wp-content/uploads/2019/02/pol%C3%ADtica-del-entretenimiento-945x610.jpg',
+    ref:'/entretenimiento'
 
 }, 
 {
 
   
     title: 'Belleza',
-    img:'https://www.xeouradio.com/wp-content/uploads/2022/09/belleza.jpg'
+    img:'https://www.xeouradio.com/wp-content/uploads/2022/09/belleza.jpg',
+    ref:"/belleza"
     
 }, 
 {
 
  
     title: 'Hogar',
-    img:'https://prodesa.com/wp-content/uploads/2021/05/iStock-1209431211-1.jpg'
+    img:'https://prodesa.com/wp-content/uploads/2021/05/iStock-1209431211-1.jpg',
+    ref:'/hogar'
    
 }, 
 {
   
   title: 'Empresarial',
-  img:'https://www.marista.edu.mx/files/media/image/program_04079f13161f39bf9eb88d620a1b12a7.jpg'
+  img:'https://www.marista.edu.mx/files/media/image/program_04079f13161f39bf9eb88d620a1b12a7.jpg',
+  ref:'/empresarial'
 },
 {
 
 
   title: 'Autos',
-  img:'https://www.eluniversal.com.mx/sites/default/files/2020/03/24/autos_de_lujo.jpg'
+  img:'https://www.eluniversal.com.mx/sites/default/files/2020/03/24/autos_de_lujo.jpg',
+  ref:'/autos'
   
 }, 
 {
 
 
   title: 'Salud',
-  img:'https://unamglobal.unam.mx/wp-content/uploads/2021/03/facSistemas-de-salud-digital.jpg'
+  img:'https://unamglobal.unam.mx/wp-content/uploads/2021/03/facSistemas-de-salud-digital.jpg',
+  ref:'/salud'
  
 }, 
 
@@ -43,7 +49,8 @@ let services_menu = [
 
 
   title: 'Mascotas',
-  img:'https://s1.eestatic.com/2020/08/26/curiosidades/mascotas/mascotas-perros-gatos_515959375_158488465_1706x960.jpg'
+  img:'https://s1.eestatic.com/2020/08/26/curiosidades/mascotas/mascotas-perros-gatos_515959375_158488465_1706x960.jpg',
+  ref:'/mascotas'
  
 }, 
 ]
@@ -53,7 +60,7 @@ $(document).ready(function () {
 
   for (let item of services_menu){
 
-    $('.services_menu').append('<div class="col-4">'
+    $('.services_menu').append('<div class="col-6 col-sm-6 col-md-4">'
       +'<div class="  my-2 mx-3">'
 
          
@@ -61,7 +68,7 @@ $(document).ready(function () {
                 +'<img class="card-img" src="'+item.img+'"></img>'
           +'</div>'
           +'<div  class=" my-2 text-center  sombreado " >'
-            + '<button style="border: solid; border-color:#2e889a;"  class="btn text-dark">'+item.title+'</button>'
+            + '<a href="'+item.ref+'" style="border: solid; border-color:#2e889a;"  class="btn text-dark">'+item.title+'</a>'
           +'</div>'
   
   
@@ -88,9 +95,14 @@ $(document).ready(function () {
     console.log(nuevo_usuario)
 
    
-    api_conection('POST', '/api/user/newUser', nuevo_usuario, function () {
-      console.log("Si se pudo")
-      notyf.success("Usuario creado")
+    api_conection('POST', '/api/user/newUser', nuevo_usuario, 
+    
+    function (response) {
+      
+      notyf.success(response.message)
+    },
+    function(response){
+      notyf.success(response.message)
     })
 
   })

@@ -1,0 +1,65 @@
+doctype html
+html(lang="es")
+        head
+        include template/headSRC
+        
+        title #{title} | Login
+
+        body
+          div(style="background-color:#2e679a;").text-center
+            img( width="130px" src="/public/img/logo.jpeg", alt="", srcset="" class="rounded-circle").my-3
+   
+
+          .container.text-center
+            .row.my-5.py-5.text-center
+              .col-3
+                
+              .col-6
+                .card 
+                  .card-header(style="background-color:#2e679a;")
+                    .row 
+                        .col-5
+                          img( width="130px" src="https://cdn-icons-png.flaticon.com/512/2037/2037885.png", alt="", srcset="" ).my-3
+      
+                        .col-7.text-start.my-5
+                          h4.text-white 
+                            b ¡ Bienvenido de nuevo !
+                      
+               
+                  .card-body.text-center
+                   
+                        div.my-2
+                          label
+                            i.fas.fa-user 
+                            |  Email:
+                          br
+                          input.user(style="width:100%" type="text")
+                        div.my-2
+                      
+                          label
+                            i.fas.fa-key 
+                            |  Contraseña:
+                          br
+                          input.password( style="width:100%" type="password")
+                        div.my-2
+                          button.login.btn.btn-success 
+                            i.fas.fa-paper-plane
+                            |  Entrar
+                      
+
+                    
+
+                  .card.footer
+                    a(href="/") ¿ Olvidates tu contraseña ?
+
+              .col-3
+
+            
+
+          include template/footer 
+          
+        
+
+        
+        include template/scripts
+        script( src='/public/js/login.js')  

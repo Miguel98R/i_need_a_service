@@ -1,4 +1,29 @@
-var notyf = new Notyf();
+const notyf = new Notyf({
+    duration: 1000,
+    position: {
+      x: 'right',
+      y: 'top',
+    },
+    types: [
+      {
+        type: 'warning',
+        background: 'orange',
+        icon: '<i class="fas fa-exclamation"></i>'
+      },
+      {
+        type: 'error',
+        background: 'indianred',
+        duration: 2000,
+        dismissible: true
+      },
+      {
+        type: 'success',
+        background: 'green',
+        duration: 2000,
+        dismissible: true
+      }
+    ]
+  });
 
 
 let api_conection = async function (method, url, data, f_, error_) {
@@ -38,10 +63,7 @@ let api_conection = async function (method, url, data, f_, error_) {
                 f_(response);
             }
         }else{
-            
             if(error_){
-               
-                notyf.error(response.message)
                 error_(response)
             }
         }

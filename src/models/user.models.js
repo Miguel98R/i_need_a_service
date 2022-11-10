@@ -33,12 +33,17 @@ let userSchema = new Schema({
     },
     nacimiento: {
         type:Number,
-        required: true,
+        required: false,
     },
 
     password: {
         type: String,
         required: true,
+    },
+    status: {
+        type: Boolean,
+        required: true,
+        default:true
     },
     email: {
         type: String,
