@@ -28,10 +28,12 @@ router.get("/new_service", async (req, res) => {
 
 
 ///EL MIGUEL TODAVIA NO HACE QUE SIRVA -<<<<
-router.get("/sudo", async (req, res) => {
+router.get("/:page", async (req, res) => {
 
 
-    res.render('admin',{title: title })
+    if(res.status(404)){
+        res.render('code404')
+    }
 })
 
 
