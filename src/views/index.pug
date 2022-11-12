@@ -1,22 +1,23 @@
 doctype html
 html(lang="es")
         head
-        include template/headSRC
-        
-        title #{title} | Home
+            include template/headSRC
+            
+            title #{title} | Home
 
         body
-          include template/nav
-          include template/search
+            
+            include template/nav
+            include template/search
 
-          div.text-center.py-4
-            h2 Conoce nuestros servicios
-          .row.services_menu
+            .text-center.py-4
+              h2 Conoce nuestros servicios
+            .row.services_menu
 
-          include template/footer 
+            include template/footer 
           
         
 
-        include ./modals/registro
-        include template/scripts
-        script( src='/public/js/index.js')  
+            include ./modals/registro
+            include template/scripts
+            script( src='/public/js/index.js')  

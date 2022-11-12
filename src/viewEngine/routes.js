@@ -1,4 +1,6 @@
 const express = require('express')
+let userModel = require('./../models/user_services.models')
+let user_serviceModel = require('./../models/user_services.models')
 const router = express.Router()
 
 let title = 'ServiceSerch'
@@ -25,9 +27,16 @@ router.get("/new_service", async (req, res) => {
 })
 
 
+router.get("/home_user", async (req, res) => {
+
+    
+    res.render('user_home',{title:  title })
+
+ 
+})
 
 
-///EL MIGUEL TODAVIA NO HACE QUE SIRVA -<<<<
+
 router.get("/:page", async (req, res) => {
 
 

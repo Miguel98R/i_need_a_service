@@ -61,11 +61,11 @@ $(document).ready(function () {
   for (let item of services_menu){
 
     $('.services_menu').append('<div class="col-6 col-sm-6 col-md-4">'
-      +'<div class="  my-2 mx-3">'
+      +'<div class=" card  my-2 mx-3">'
 
          
-          +'<div class=" bg-transparent container-fluid">'
-                +'<img class="card-img" src="'+item.img+'"></img>'
+          +'<div class=" bg-transparent ">'
+                +'<img class="img-fluid" style="max-height:130px;" src="'+item.img+'"></img>'
           +'</div>'
           +'<div  class=" my-2 text-center  sombreado " >'
             + '<a href="'+item.ref+'" style="border: solid; border-color:#2e889a;"  class="btn text-dark">'+item.title+'</a>'

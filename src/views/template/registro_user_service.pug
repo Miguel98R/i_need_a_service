@@ -1,10 +1,10 @@
 
-.p-5.text-center.bg-image(style="\
+.text-center(style="\
 background-image: url('https://merida.anahuac.mx/hs-fs/hubfs/posgrado/Blog%20Posgrado/2018%20Posgrado/Junio%2018%20posgrado/negociacion%20para%20empresas.png?width=1200&name=negociacion%20para%20empresas.png');\
 height: 400px;\
 ")
-  .mask(style='background-color: rgba(0, 0, 0, 0.6);')
-    .d-flex.justify-content-center.align-items-center.h-100
+
+    .d-flex.justify-content-center.align-items-center.h-100(style='background-color: rgba(0, 0, 0, 0.6);')
       .text-white
         h1.mb-3 ¡ Da el primer paso !
         h4.mb-3 Iniciar tu registro te lleva menos de 10 minutos
@@ -31,25 +31,32 @@ br
                             b 
                                 i.fa-solid.fa-user
                                 |  Nombe completo:
-                        .col-4
+                        .col-12.col-sm-12.col-md-4.col-lg-4
+                         
                             .form-outline
-
+                                
+                                label.form-label(for='name_user_service')  Nombre(s):
                                 input#name_user_s.form-control(type='text')
-                                label.form-label(for='name_user_service')  Nombre(s)
+                                
 
-                        .col-4 
-                            .form-outline
-                                input#apellidoPa_user_s.form-control(type='text')
-                                label.form-label(for='apellidoPa_user_s') Apellido paterno
+                        .col-12.col-sm-12.col-md-4.col-lg-4
                         
-                        .col-4
                             .form-outline
+
+                                label.form-label(for='apellidoPa_user_s') Apellido paterno:
+                                input#apellidoPa_user_s.form-control(type='text')
+                                
+                        
+                        .col-12.col-sm-12.col-md-4.col-lg-4
+                            .form-outline
+                                
+                                label.form-label(for='apellidoMa_user_s') Apellido materno:
                                 input#apellidoMa_user_s.form-control(type='text')
-                                label.form-label(for='apellidoMa_user_s') Apellido materno
+                                
                     br
                     .row
                         
-                        .col-6
+                        .col-12.col-sm-12
                             p 
                                 b   
                                     i.fa-solid.fa-cake-candles

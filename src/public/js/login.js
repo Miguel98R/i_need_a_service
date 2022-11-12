@@ -29,7 +29,11 @@
         
           function (response) {
              notyf.success(response.message)
-             location.href="/"
+
+            let data_user =  response.data
+   
+            localStorage.setItem("data_user", JSON.stringify (data_user));
+            location.href="/home_user"
             
           },
           
