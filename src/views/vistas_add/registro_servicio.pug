@@ -1,0 +1,67 @@
+doctype html
+html(lang="es")
+        head
+        include ../template/headSRC
+        
+        title #{title} | Login
+
+        body
+          div(style="background-color:#2e679a;").text-center
+             a(href='/home_service').btn.text-white 
+                i.fa-solid.fa-house-chimney.fs-1
+
+          .text-center.mx-3.my-3
+            .card
+                .card-header
+                    h5 Datos del servicio 
+                .card-body.mx-5
+                    .text-start.my-2
+                        label 
+                            i.fa-solid.fa-pen
+                            |   Nombre del servicio: 
+                        br  
+                        input.name_service(type="text")
+                      
+                    .text-start.my-2
+                        label
+                            i.fas.fa-briefcase 
+                            |   Categoria: 
+                        br
+                        select.category_servicio(name="")
+                            option(value="0") Selecciona una categoria 
+                            option(value="Entretenimiento") Entretenimiento
+                            option(value="Belleza") Belleza
+                            option(value="Hogar") Hogar
+                            option(value="Empresarial") Empresarial
+                            option(value="Autos") Autos
+                            option(value="Salud") Salud
+                            option(value="Mascotas") Mascotas
+                    .text-start.my-2
+                        label 
+                            i.fas.fa-user-cog
+                            |   Persona encargada:
+                        br   
+                        input.persona_encargada(type="text")
+                    .text-start.my-2
+                        label 
+                            i.fas.fa-newspaper
+                            |  Descripción del servicio:
+                        br   
+                        input.description(type="text")
+
+
+
+                .card-footer
+                    button.save_service.btn-success.btn Guardar Servicio
+
+            
+
+            
+
+         
+          
+        
+
+        
+        include ../template/scripts
+        script( src='../public/js/registro_servicio.js')  

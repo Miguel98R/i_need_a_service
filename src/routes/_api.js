@@ -3,6 +3,8 @@ const router = express.Router()
 
 //RUTAS DE USUARIO
 router.use('/user', require('./user.routes'))
+router.use('/services', require('./services.routes'))
+
 
 
 

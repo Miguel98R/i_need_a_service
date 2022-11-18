@@ -47,6 +47,44 @@ let login_user = async function (req, res) {
             
         }
 
+        if(type_user == 'Service'){
+
+            let user_data = await user_serviceModel.findOne({email}).lean()
+
+            if (!user_data) {
+                res.status(404).json({
+                    success: false,
+                    message: 'Usuario incorrecto'
+                })
+                return 0
+            }
+    
+            console.log(user_data.password)
+
+            if (user_data.password == password) {
+
+                res.status(200).json({
+                    message: 'Iniciando sesión',
+                    success: true,
+                    data: user_data,
+                    
+                })
+    
+    
+            } else {
+    
+                res.status(403).json({
+                    code: 403,
+                    success: false,
+                    message: 'Contraseña incorrecta'
+                })
+                return 0
+    
+    
+            }
+            
+        }
+
     
 
     } catch (e) {

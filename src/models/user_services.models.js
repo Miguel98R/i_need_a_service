@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const services = require('./services.models')
 
 let user_ServiceSchema = new Schema({
     nombre_user_s: {
@@ -51,11 +50,7 @@ let user_ServiceSchema = new Schema({
         required: true,
     },
    
-    service: { 
-        type: Schema.Types.ObjectId,
-        required: false,
-        ref: services
-    },
+    
     status: { // true activo 
         type: Boolean,
         required: true,

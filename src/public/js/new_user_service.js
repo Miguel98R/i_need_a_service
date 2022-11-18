@@ -139,15 +139,6 @@ $(document).ready(function () {
         return 
       }
       
-      
-      // if($('#opcion_servicio').val() == '' || $('#opcion_servicio').val() == undefined){
-         
-      //   notyf.error('Seleccione su tipo de servicio') 
-
-      //   $('#opcion_servicio').css("background-color", "yellow");
-
-      //   return 
-      // }
      
 
 
@@ -180,9 +171,18 @@ $(document).ready(function () {
 
 
 
-      api_conection('POST', '/api/user/newUser_service', nuevo_usuario_sevice, function () {
+      api_conection('POST', '/api/user/newUser_service', nuevo_usuario_sevice, function (data) {
+
+        let data_user = data.data
+
+        localStorage.setItem("data_user_service", JSON.stringify (data_user));
+      
+
+
         console.log("Si se pudo")
         notyf.success("Usuario creado")
+
+        location.href = "/home_service"
       },
       function(response){
       })

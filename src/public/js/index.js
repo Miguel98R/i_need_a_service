@@ -2,46 +2,46 @@ let services_menu = [
   {
   
     title: 'Entretenimiento',
-    img:'https://www.deyaalvarezvillajuana.com/wp-content/uploads/2019/02/pol%C3%ADtica-del-entretenimiento-945x610.jpg',
-    ref:'/entretenimiento'
+    img:'https://cdn-icons-png.flaticon.com/512/3981/3981054.png',
+    val:'entretenimiento'
 
 }, 
 {
 
   
     title: 'Belleza',
-    img:'https://www.xeouradio.com/wp-content/uploads/2022/09/belleza.jpg',
-    ref:"/belleza"
+    img:'https://cdn-icons-png.flaticon.com/512/2377/2377470.png',
+    val:"belleza"
     
 }, 
 {
 
  
     title: 'Hogar',
-    img:'https://prodesa.com/wp-content/uploads/2021/05/iStock-1209431211-1.jpg',
-    ref:'/hogar'
+    img:'https://cdn-icons-png.flaticon.com/512/1476/1476182.png',
+    val:'hogar'
    
 }, 
 {
   
   title: 'Empresarial',
-  img:'https://www.marista.edu.mx/files/media/image/program_04079f13161f39bf9eb88d620a1b12a7.jpg',
-  ref:'/empresarial'
+  img:'https://cdn-icons-png.flaticon.com/512/2760/2760963.png',
+  val:'empresarial'
 },
 {
 
 
   title: 'Autos',
-  img:'https://www.eluniversal.com.mx/sites/default/files/2020/03/24/autos_de_lujo.jpg',
-  ref:'/autos'
+  img:'https://cdn-icons-png.flaticon.com/512/741/741407.png',
+  val:'autos'
   
 }, 
 {
 
 
   title: 'Salud',
-  img:'https://unamglobal.unam.mx/wp-content/uploads/2021/03/facSistemas-de-salud-digital.jpg',
-  ref:'/salud'
+  img:'https://cdn-icons-png.flaticon.com/512/4310/4310163.png',
+  val:'salud'
  
 }, 
 
@@ -49,8 +49,8 @@ let services_menu = [
 
 
   title: 'Mascotas',
-  img:'https://s1.eestatic.com/2020/08/26/curiosidades/mascotas/mascotas-perros-gatos_515959375_158488465_1706x960.jpg',
-  ref:'/mascotas'
+  img:'https://cdn-icons-png.flaticon.com/512/3460/3460407.png',
+  val:'mascotas'
  
 }, 
 ]
@@ -61,14 +61,14 @@ $(document).ready(function () {
   for (let item of services_menu){
 
     $('.services_menu').append('<div class="col-6 col-sm-6 col-md-4">'
-      +'<div class=" card  my-2 mx-3">'
+      +'<div class=" card sombreado shadow  my-2 mx-2">'
 
          
           +'<div class=" bg-transparent ">'
-                +'<img class="img-fluid" style="max-height:130px;" src="'+item.img+'"></img>'
+                +'<img class="img-fluid" style="max-height:280px;" src="'+item.img+'"></img>'
           +'</div>'
-          +'<div  class=" my-2 text-center  sombreado " >'
-            + '<a href="'+item.ref+'" style="border: solid; border-color:#2e889a;"  class="btn text-dark">'+item.title+'</a>'
+          +'<div  class="  text-center   " >'
+            + '<button value="'+item.val+'" style=" background-color:#2e889a; width:100%;height:100%;"  class="seccion fw-bold btn text-white">'+item.title+'</button>'
           +'</div>'
   
   
@@ -79,8 +79,12 @@ $(document).ready(function () {
 
   }
 
-  
+  $(document.body).on('click','.seccion',function(){
+    let value = $(this).val()
+    localStorage.setItem('seccion',value)
+    location.href ='/seccion/'+value
 
+  })
 
 
   let nuevo_usuario = {}

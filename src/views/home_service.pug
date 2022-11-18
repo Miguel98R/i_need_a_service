@@ -1,0 +1,53 @@
+doctype html
+html(lang="es")
+        head
+            include template/headSRC
+            
+            title #{title} | Home
+
+        body
+
+            .text-center
+                include template/menu
+            
+            .text-center(style="background-color:#2e889a;")
+                .row 
+                    .col-1
+                    .col-10.text-center.my-2
+                        a(href='/home_user')
+                                img( width="70px" src="./public/img/logo.jpeg", alt="", srcset="" class="rounded-circle")
+                    .col-1
+
+            .text-center(style="background-color:#2e679a;")
+                
+                 
+                button.btn.btn-ligth.text-white(type='button') 
+                    i.fas.fa-user
+                    |  Bienvenido: 
+                    span.mx-2.user_name   User
+                button.cerrar_sesion.btn.btn-ligth.btn-sm.mx-2.text-white(type='button') 
+                    i.fas.fa-sign-out-alt
+                    |  Cerrar sesión
+
+            
+                
+                 
+                
+
+            
+
+            .text-center.py-4
+              h4 Lista de Servicios ofrecidos
+
+            .row.grid_services
+            
+
+           
+          
+        
+
+            
+            include template/scripts
+            script( src='/public/js/index.js')
+            script( src='/public/js/user_home_service.js')  
+

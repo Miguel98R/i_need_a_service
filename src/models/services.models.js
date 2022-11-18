@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const category = require('./categories.models')
-
+const user = require('./user_services.models')
 
 let serviceSchema = new Schema({
     nombre_service: {
@@ -13,14 +12,24 @@ let serviceSchema = new Schema({
         required: true,
     },
      category: {
-        type: Schema.Types.ObjectId,
+        type: String,
         required: false,
-        ref: category
+     
     },
+    persona_encargada:{
+        type:String,
+        required:false
+    },
+    user_service: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref:user
+     },
    
     status: {
         type: String,
         required: true,
+        default:true
     },
    
  
